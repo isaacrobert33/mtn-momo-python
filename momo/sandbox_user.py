@@ -8,7 +8,7 @@ class UserProvisioning(object):
         self.ref_id = ref_id
         
         self.requestor = APIRequestor(sub_key=sub_key)
-
+    
     def create_user(self, callback=""):
         data = {
             "providerCallbackHost": callback
@@ -36,6 +36,6 @@ class UserProvisioning(object):
         return response[0].get("apiKey")
 
     
-# 
-user = UserProvisioning(sub_key="7f58138a101041f2b26d4bb04c3d02e1", ref_id="46223256-8e88-4982-ab45-b502c97cd32d")
-print(user.api_key)
+# # 
+# user = UserProvisioning(sub_key="7f58138a101041f2b26d4bb04c3d02e1", ref_id="46223256-8e88-4982-ab45-b502c97cd32d")
+# print(user.api_key)
